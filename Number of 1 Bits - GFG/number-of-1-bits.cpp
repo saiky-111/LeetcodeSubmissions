@@ -9,14 +9,12 @@ class Solution {
         // Write Your Code here
         //right shift
        int cnt=0;
-        while(N>0){
-            if((N&1)!=0){
-                cnt++;
+      for(int i=0;i<32;i++){
+        if((N& (1<<i))!=0){
+            cnt++;
         }
-        N=N>>1;
-       
-    }
-    return cnt;
+      }
+     return cnt;
     }
 };
 
